@@ -17,8 +17,9 @@ public class Runigram {
 		//System.out.println();
 		//print(flippedHorizontally(tinypic));
 		//System.out.println();
-		print(flippedVertically(tinypic));
 		System.out.println();
+		print(flippedHorizontally(tinypic));
+		
 
 		//print(scaled((tinypic),3,5));
 
@@ -113,7 +114,7 @@ public class Runigram {
 		Color [][] flippedHorizontally = new Color[numRows][numCols];
 		for (int i = 0 ; i < numRows ; i++) {
 			for (int j = 0 ; j < numCols ; j++) {
-				flippedHorizontally [i][j] = image[i][numCols-1];
+				flippedHorizontally [i][j] = image[i][numCols-1-j];
 
 	        }
 		}
