@@ -18,7 +18,7 @@ public class Runigram {
 		//print(flippedHorizontally(tinypic));
 		//System.out.println();
 		System.out.println();
-		print(flippedHorizontally(tinypic));
+		print(flippedVertically(tinypic));
 		
 
 		//print(scaled((tinypic),3,5));
@@ -125,15 +125,14 @@ public class Runigram {
 	 * Returns an image which is the vertically flipped version of the given image. 
 	 */
 	public static Color[][] flippedVertically(Color[][] image){
-		int numCols = image[0].length;
-		int numRows = image.length;
-		Color [][] flippedVertically = new Color[numRows][numCols];
-		for (int i = 0 ; i < numRows ; i++) {
-			int endRows = numCols;
-			for (int j = 0 ; j < numCols ; j++) {
-				flippedVertically [j][i] = image[endRows-1][i];
-				endRows --;
-	       }
+		int rows = image.length;
+		int columns = image [0].length;
+		Color [][] flippedVertically = new Color[rows][columns];
+
+		for (int i = 0; i <= rows - 1; i++){
+			for (int j = 0; j<= columns - 1; j++){
+				flippedVertically [i][j] = image [rows - 1 - i][j];
+			}
 		}
 		return flippedVertically;
 
