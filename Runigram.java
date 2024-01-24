@@ -125,13 +125,13 @@ public class Runigram {
 	 * Returns an image which is the vertically flipped version of the given image. 
 	 */
 	public static Color[][] flippedVertically(Color[][] image){
-		int rows = image.length;
-		int columns = image [0].length;
-		Color [][] flippedVertically = new Color[rows][columns];
+		int numRows = image.length;
+		int numCols = image [0].length;
+		Color [][] flippedVertically = new Color[numRows][numCols];
 
-		for (int i = 0; i <= rows - 1; i++){
-			for (int j = 0; j<= columns - 1; j++){
-				flippedVertically [i][j] = image [rows - 1 - i][j];
+		for (int i = 0; i < numRows ; i++){
+			for (int j = 0; j < numCols ; j++){
+				flippedVertically [i][j] = image [numRows - 1 - i][j];
 			}
 		}
 		return flippedVertically;
